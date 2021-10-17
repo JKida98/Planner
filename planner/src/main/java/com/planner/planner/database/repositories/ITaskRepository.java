@@ -4,5 +4,5 @@ import com.planner.planner.database.entities.DbTask;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ITaskRepository extends JpaRepository<DbTask, Integer> {
+public interface ITaskRepository extends JpaRepository<DbTask, Long> {
 }

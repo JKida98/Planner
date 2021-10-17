@@ -17,9 +17,12 @@ public class TaskService implements ITaskService {
     private ModelMapper _mapper;
 
     @Override
-    public TaskDto getById(int id) {
+    public TaskDto getById(Long id) {
         var found = _taskRepository.findById(id);
-        var foundDto = _mapper.map(found, TaskDto.class);
+        if (!found.isPresent()) {
+            return null;
+        }
+        var foundDto = _mapper.map(found.get(), TaskDto.class);
         return foundDto;
     }
 

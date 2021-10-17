@@ -3,5 +3,5 @@ package com.planner.planner.services.tasks;
 import com.planner.planner.dtos.TaskDto;
 
 public interface ITaskService {
-    TaskDto getById(int id);
+    TaskDto getById(Long id);
 }

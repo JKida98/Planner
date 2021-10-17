@@ -6,6 +6,10 @@ import lombok.Setter;
 @Getter
 @Setter
 public class UserDto {
-    String fullName;
-    String description;
+    private String fullName;
+    private String description;
+
+    public UserDto() {
+
+    }
 }

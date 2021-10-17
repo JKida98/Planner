@@ -8,9 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class TaskDto {
-    String name;
-    String description;
-    Date startTime;
-    Date endTime;
-    UserDto owner;
+    private String name;
+    private String description;
+    private Date startTime;
+    private Date endTime;
+    private UserDto owner;
+
+    public TaskDto() {
+
+    }
 }

@@ -18,8 +18,8 @@ public class TaskController {
     @Autowired
     private ITaskService _taskService;
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<TaskDto> getById(@PathVariable int id) {
+    @GetMapping(value = "/{id}", produces = "application/json")
+    public ResponseEntity<TaskDto> getById(@PathVariable Long id) {
         TaskDto result = _taskService.getById(id);
         return new ResponseEntity<>(result, HttpStatus.FOUND);
     }
