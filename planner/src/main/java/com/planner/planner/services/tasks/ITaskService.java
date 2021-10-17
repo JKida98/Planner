@@ -1,7 +1,7 @@
 package com.planner.planner.services.tasks;
 
-import com.planner.planner.database.entities.DbTask;
+import com.planner.planner.dtos.TaskDto;
 
 public interface ITaskService {
-    DbTask getByName(String name);
+    TaskDto getById(int id);
 }

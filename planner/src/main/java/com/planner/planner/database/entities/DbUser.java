@@ -15,9 +15,9 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table(name = "Users") 
+@Table(name = "Users")
 public class DbUser extends BaseDbModel {
-    
+
     @Column(name = "fullName", updatable = true, nullable = false)
     private String fullName;
 
@@ -26,4 +26,13 @@ public class DbUser extends BaseDbModel {
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<DbTask> tasks;
+
+    public DbUser(String fullName, String description) {
+        this.fullName = fullName;
+        this.description = description;
+    }
+
+    public DbUser(){
+        
+    }
 }
