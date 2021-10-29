@@ -32,7 +32,7 @@ public class DbUser extends BaseDbModel {
         this.description = description;
     }
 
-    public DbUser(){
-        
+    public DbUser() {
+
     }
 }
