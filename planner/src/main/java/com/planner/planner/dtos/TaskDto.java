@@ -2,17 +2,21 @@ package com.planner.planner.dtos;
 
 import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 
 @Getter
-@Setter
+@Builder(toBuilder = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class TaskDto {
-    String name;
-    String description;
-    Date startTime;
-    Date endTime;
-    UserDto owner;
+    public String name = "test";
+    public String description = "testDescription";
+    public Date startTime = new Date();
+    public Date endTime = new Date();
+    public UserDto owner = null;
 
     public TaskDto() {
         super();

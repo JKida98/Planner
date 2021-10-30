@@ -21,22 +21,22 @@ import lombok.Setter;
 public class DbTask extends BaseDbModel {
 
     @Column(name = "name", updatable = true, nullable = false)
-    private String name;
+    public String name;
 
     @Column(name = "description", updatable = true, nullable = true)
-    private String description;
+    public String description;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "startTime", updatable = true, nullable = false)
-    private Date startTime;
+    public Date startTime;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "endTime", updatable = true, nullable = false)
-    private Date endTime;
+    public Date endTime;
 
     @JoinColumn(name = "USER_ID", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.LAZY)
-    private DbUser owner;
+    public DbUser owner;
 
     public DbTask(String name, String description, Date startTime, Date endTime, DbUser owner) {
         this.name = name;
