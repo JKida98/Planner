@@ -1,10 +1,12 @@
 package com.planner.planner.services.tasks;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.planner.planner.dtos.TaskDto;
+import com.planner.planner.dtos.TaskForCreationDto;
 
 public interface ITaskService {
     TaskDto findById(Long id);
-    ArrayList<TaskDto> findAll();
+    List<TaskDto> findAll();
+    TaskDto save(TaskForCreationDto taskForCreation);
 }

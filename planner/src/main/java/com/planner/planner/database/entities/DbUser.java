@@ -35,4 +35,28 @@ public class DbUser extends BaseDbModel {
     public DbUser() {
 
     }
+
+    public String getFullName() {
+        return this.fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<DbTask> getTasks() {
+        return this.tasks;
+    }
+
+    public void setTasks(List<DbTask> tasks) {
+        this.tasks = tasks;
+    }
 }

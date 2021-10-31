@@ -2,24 +2,15 @@ package com.planner.planner.dtos;
 
 import java.util.Date;
 
-public class TaskDto {
-    public Long id;
+public class TaskForCreationDto {
     public String name;
     public String description;
     public Date startTime;
     public Date endTime;
-    public UserDto owner;
+    public Long ownerId;
 
-    public TaskDto() {
+    public TaskForCreationDto() {
 
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return this.id;
     }
 
     public void setName(String name) {
@@ -54,12 +45,11 @@ public class TaskDto {
         return this.endTime;
     }
 
-    public void setOwner(UserDto owner) {
-        this.owner = owner;
+    public void setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
     }
 
-    public UserDto getOwner() {
-        return this.owner;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
-
 }
